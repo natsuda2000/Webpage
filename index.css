@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+* a {
+    text-decoration: none; /*ไม่เอาเส้นใต้ บางทีฟ้อนแถมเส้นใต้มาให้*/
+}
+
+* li {
+    list-style: none;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.bg a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bg::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.sofn.com/wp-content/uploads/2022/09/GettyImages-1084637308.jpg');
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+}
+.menu {
+    position: relative;
+    width: 85%;
+    height: 15vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.logo a{
+    font-size: 2rem;
+    color: white;
+}
+.menu ul {
+    display: flex;
+}
+.menu ul li {
+    padding: 0 17px;
+}
+.menu ul li a {
+    font-weight: bold;
+    color: white;
+}
+
+/* Content */
+
+.content {
+    width: 85%;
+    margin: 0 auto;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.content .header, .grid-card {
+    width: 50%;
+    position: relative;
+}
+.content .header {
+    color: white;
+    padding: 50px;
+}
+.content .header h3{
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+}
+.content .header h3 i{
+    color: rgb(255, 68, 68);
+}
+.content .header h1{
+    font-size: 4.5rem;
+}
+.content .header p {
+    opacity: .7;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-gap: 20px;
+}
+.grid-card .box {
+    width: 280px;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    transition: .4s;
+    position: relative;
+}
+.bg1 {
+    background-image: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/44000/44866-Torget-Fishmarket.jpg');
+}
+.bg2 {
+    background-image: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/44000/44864-Bryggen.jpg');
+}
+.bg3 {
+    background-image: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/44000/44861-Bryggen.jpg');
+}
+.bg4 {
+    background-image: url('https://mediaim.expedia.com/destination/1/66f925b9daafbad1242e0273b4190200.jpg');
+}
+.content .box h2{
+    position: absolute;
+    bottom: 7px;
+    left: 25px;
+    color: white;
+}
+.content .box:hover {
+    transform: translateY(-15px);
+}
+.header button {
+    border: solid 3px white;
+    background: none;
+    color: white;
+    font-size: 2.5rem;
+    padding: 5px 15px;
+    margin: 15px 0;
+}
+.header button:hover {
+    background: white;
+    color: black;
+}
